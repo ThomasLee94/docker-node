@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    # Look in current directory and build this image
+    build: .
+    ports:
+      # - means mapping as an array
+      - "8081:8081"

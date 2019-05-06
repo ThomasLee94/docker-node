@@ -6,13 +6,13 @@ WORKDIR /usr/app
 
 # Copy everything in current directory to working directory in container
 # only copy packge.json
-COPY ./package.json ./
+COPY package.json .
 
 # Install dependencies
 RUN npm install
 
 # Only rebuild if we change our dependencies, not source code - caching
-COPY ./ ./
+COPY . .
 
 # Default command
 CMD ["npm","start"]
