@@ -5,6 +5,7 @@ services:
     image: 'redis'
   node-app:
     # Look in current directory and build this image
+    restart: always
     build: .
     ports:
       # - means mapping as an array
